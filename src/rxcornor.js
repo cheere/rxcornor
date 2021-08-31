@@ -16,7 +16,9 @@
   const style = getAttr('style') || null
   const src = getAttr('src') || ''
   let origin = src.replace('rxcornor.js', '') || ''
-  origin = src.replace('rxcornor.min.js', '') || ''
+  origin = origin.replace('rxcornor.min.js', '') || ''
+
+  // console.log('origin=', origin)
 
   const div = document.createElement('div')
   div.innerHTML = `
@@ -45,6 +47,16 @@
       head.appendChild(script);
     }
   }
+
+  // function headAddMeta(originUrl) {
+  //   const head = document.head || document.getElementsByTagName('head')[0];
+  //   const meta = document.createElement('meta')
+  //   meta.httpEquiv = 'Access-Control-Allow-origin'
+  //   meta.content = originUrl
+  //   head.appendChild(meta)
+  // }
+
+  // headAddMeta(origin)
 
   const dateTime = parseInt(new Date().getTime() / 108000)
   headAppendLabel(origin + 'rxcornor.css?' + dateTime)
