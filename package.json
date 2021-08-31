@@ -1,6 +1,6 @@
 {
   "name": "rxcornor",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "website suspension corner.",
   "main": "dist/rxcornor.js",
   "scripts": {

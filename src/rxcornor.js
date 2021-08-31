@@ -15,7 +15,8 @@
   const className = getAttr('className') || ''
   const style = getAttr('style') || null
   const src = getAttr('src') || ''
-  const origin = src.replace('rxcornor.js', '') || ''
+  let origin = src.replace('rxcornor.js', '') || ''
+  origin = src.replace('rxcornor.min.js', '') || ''
 
   const div = document.createElement('div')
   div.innerHTML = `
