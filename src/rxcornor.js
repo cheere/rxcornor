@@ -33,7 +33,7 @@
   // head
   function headAppendLabel(src) {
     const head = document.head || document.getElementsByTagName('head')[0];
-    if (src.indexOf("js") == -1) { // css
+    if (src.indexOf(".js") == -1) { // css
       const link = document.createElement('link');
       link.setAttribute("rel", "stylesheet");
       link.setAttribute("href", src);
