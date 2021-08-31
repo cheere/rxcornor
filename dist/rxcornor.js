@@ -1,0 +1,6 @@
+/*!
+ * RxCornor
+ * version 0.0.1
+ * by srxboys on 2021-08-31 09:57:17 .
+ */
+"use strict";!function(){const e=(document.getElementById("rxcornor")||{}).attributes||{},t=function(t=""){return(e[t]||{}).value||""},n=t("link"),r=t("target")||"_blank",o=t("title")||"GitHub",s=t("className")||"",c=t("style")||null,a=(t("src")||"").replace("rxcornor.js","")||"",i=document.createElement("div");i.innerHTML=`\n    <a href="${n}" target="${r}" rel="noopener noreferrer" title="Follow me on ${o}" aria-describedat="rxcornor">\n      <div class="rxcont ${s}">\n        <div class="text">${o}</div>\n      </div>\n    </a>\n  `,i.className="rxcornor",c&&(i.style=c);!function(e){const t=document.head||document.getElementsByTagName("head")[0];if(-1==e.indexOf("js")){const n=document.createElement("link");n.setAttribute("rel","stylesheet"),n.setAttribute("href",e),t.appendChild(n)}else{const n=document.createElement("script");n.type="text/javascript",n.setAttribute("src",e),t.appendChild(n)}}(a+"rxcornor.css?"+parseInt((new Date).getTime()/108e3)),function e(){setTimeout((()=>{document.body?document.body.appendChild(i):e()}),100)}(),i.onmouseover=function(){i.classList.add("play")},i.onmouseout=function(){i.classList.remove("play")}}();
