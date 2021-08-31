@@ -15,10 +15,16 @@
   const className = getAttr('className') || ''
   const style = getAttr('style') || null
   const src = getAttr('src') || ''
-  let origin = src.replace('rxcornor.js', '') || ''
-  origin = origin.replace('rxcornor.min.js', '') || ''
 
-  // console.log('origin=', origin)
+  function lookforjs(origin, string) {
+    const i = origin.lastIndexOf(string)
+    if (i > 0) {
+      return origin.slice(0, i)
+    }
+    return origin
+  }
+  let origin = lookforjs(src, 'rxcornor.js')
+  origin = lookforjs(origin, 'rxcornor.min.js')
 
   const div = document.createElement('div')
   div.innerHTML = `
