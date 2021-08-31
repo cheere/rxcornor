@@ -3,7 +3,7 @@
 在 html 中 引入 script 标签，并配置相应的属性，，网站右上角 就会有 快捷角标
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/rxcornor@0.0.4/dist/rxcornor.min.js" id="rxcornor" link="https://github.com/cheere/rxcornor"></script>
+<script src="https://cdn.jsdelivr.net/npm/rxcornor@0.0.6/dist/rxcornor.min.js" id="rxcornor" link="https://github.com/cheere/rxcornor"></script>
 ```
 
 or (或者)
