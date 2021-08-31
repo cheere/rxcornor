@@ -3,7 +3,17 @@
 在 html 中 引入 script 标签，并配置相应的属性，，网站右上角 就会有 快捷角标
 
 ```html
-<script src="dist/rxcornor.js" id="rxcornor" link="http://baidu.dd" target="_blank" title="Gitee" className="a b"></script>
+<script src="https://cdn.jsdelivr.net/npm/rxcornor@0.0.4/dist/rxcornor.min.js" id="rxcornor" link="https://github.com/cheere/rxcornor"></script>
+
+<!-- 或者 or -->
+
+<script src="https://cdn.jsdelivr.net/npm/rxcornor@0.0.4/dist/rxcornor.min.js"
+  id="rxcornor"
+  link="https://gitee.com/cheere/rxcornor"
+  target="_blank"
+  title="GitHub"
+  className="a b"
+></script>
 ```
 
 ## 属性
