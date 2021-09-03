@@ -7,11 +7,11 @@ const path  = require('path')
 const { configBanner } = require('./util.config')
 
 export default {
-  input: path.resolve(__dirname, '..', 'src/rxcornor.js'),
+  input: path.resolve(__dirname, '..', 'src/index.js'),
   output: {
-    file: path.resolve(__dirname, '..', 'dist/rxcornor.js'),
-    format: 'cjs',  // 代码打包时的格式，这个格式可以前后端通用，除此之外还有其他格式：cjs，iife，es6，amd, umd
-    name: 'bundleName', // 如果 iife/umd 需要指定一个全局变量名
+    file: path.resolve(__dirname, '..', 'dist/index.js'),
+    format: 'umd',  // 代码打包时的格式，这个格式可以前后端通用，除此之外还有其他格式：cjs，iife，es6，amd, umd
+    name: 'RxCornor', // 如果 iife/umd 需要指定一个全局变量名
     banner: configBanner,
     plugins: [
       // resolve(),

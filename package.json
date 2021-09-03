@@ -1,8 +1,8 @@
 {
   "name": "rxcornor",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "website suspension corner.",
-  "main": "dist/rxcornor.js",
+  "main": "dist/index.js",
   "scripts": {
     "dev": "rollup -c build/rollup.config.js",
     "build": "npm run build:js && npm run build:css3",
