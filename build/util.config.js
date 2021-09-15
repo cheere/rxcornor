@@ -36,8 +36,14 @@ const configCurrentTime = FormatDateString(now)
 const configCurrentYear = FormatDateString(now, 'YY')
 
 // console.log('webpack->version=', version)
-const configBanner = '/*!\n * ' + 'RxCornor' + '\n * version ' + version + '\n * by srxboys on ' + configCurrentTime + ' .\n' + ' */\n'
-
+const configBanner = `
+/*!
+ * RxCornon
+ * version: ${version}
+ * repo: https://github.com/cheere/rxcornor
+ * build: ${configCurrentTime}
+ */
+`
 
 // console.log('version=>', version)
 // console.log('configBanner=>', configBanner)

@@ -1,6 +1,8 @@
+
 /*!
- * RxCornor
- * version 0.0.7
- * by srxboys on 2021-09-03 17:34:09 .
+ * RxCornon
+ * version: 0.0.8
+ * repo: https://github.com/cheere/rxcornor
+ * build: 2021-09-15 15:38:04
  */
 .rxcornor {  position: absolute;  right: 0;  top: -40px;  overflow: hidden;  z-index: 100;  display: block;  background: #008000;  min-height: 100px;  border-radius: 40px;  /* transform: rotate(45deg); */}.rxcornor a {  cursor: pointer;  list-style: none;  text-decoration: none;  font-size: 16px;  color: #fff}.rxcornor a .rxcont {  margin: 0 auto;  padding: 60px 10px 20px 10px;  max-width: 80px;  text-align: center;}.rxcornor.play {  -webkit-animation: sku-img-box-move 0.5s ease;          animation: sku-img-box-move 0.5s ease;  -webkit-animation-fill-mode: forwards;          animation-fill-mode: forwards;}@-webkit-keyframes sku-img-box-move {  0% {-webkit-transform:scale(1);}  10%,20%{-webkit-transform:scale(0.9) rotate(-3deg);}  30%,50%,70%,90%{-webkit-transform:scale(1.2) rotate(3deg);}  40%,60%,80%{-webkit-transform:scale(1.2) rotate(-3deg);}  100%{-webkit-transform:scale(1) rotate(0);}}@keyframes sku-img-box-move {  0% {-webkit-transform:scale(1);}  10%,20%{-webkit-transform:scale(0.9) rotate(-3deg);}  30%,50%,70%,90%{-webkit-transform:scale(1.2) rotate(3deg);}  40%,60%,80%{-webkit-transform:scale(1.2) rotate(-3deg);}  100%{-webkit-transform:scale(1) rotate(0);}}

@@ -2,10 +2,6 @@ let isNode = false
 const domString = 'rxcornor'
 
 function RxCornor() {
-  // if (process.env.NODE_ENV !== 'production' && !(this instanceof RxCornor)) {
-  //   console.warn('RxCornor is a constructor and should be called with `new` keyword');
-  // }
-
   if (!(this instanceof RxCornor)) {
     console.warn('RxCornor is a constructor and should be called with `new` keyword');
   }
@@ -100,7 +96,7 @@ function __appendChild(div) {
     if (document.body) {
       document.body.appendChild(div)
     } else {
-      appendChild()
+      __appendChild(div)
     }
   }, 100);
 }
@@ -161,7 +157,7 @@ function headAppendLabel(src) {
 function getTemplate() {
   const options = getAllOwnProperty()
   if (!options) {
-    return `<div>error</div>`
+    return `<div data-set-tip="getTemplate-fn error"></div>`
   }
   const link = options.link || ''
   const target = options.target || ''
@@ -215,6 +211,7 @@ function addNomalAnimal() {
   }
 }
 
+RxCornor.prototype.version = '__VERSION__'
 RxCornor.prototype.headAppendLabel = headAppendLabel
 RxCornor.prototype.getTemplate = getTemplate
 RxCornor.prototype.setConfig = setConfig

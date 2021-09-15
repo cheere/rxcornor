@@ -5,13 +5,23 @@ const rxcornorConfig = {
   // style: '',  // default: null - <string>
   link: 'https://github.com/cheere/rxcornor'
 }
+
+// correct - init
 const c = new RxCornor()
+
+// error - init
+// const c = RxCornor()
+// const c = RxCornor
+
 // console.log('c=', c)
 c.setConfig(rxcornorConfig)
 
 c.title = 'again-srxboys' // not support
 const template = c.getTemplate()
 // console.log('template=>\n', template, '\n\n')
+
+const version = c.version
+console.log('version=', version)
 
 if (template) {
   // 可以不用(在 html 中导入，或者在 vue-cli/vite 的 .js 模板中 导入)
