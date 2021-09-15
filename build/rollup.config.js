@@ -10,9 +10,7 @@ const { configBanner, configVersion } = require('./util.config')
 
 const env = {
   '__VERSION__': JSON.stringify(configVersion),
-  'process.env.NODE_ENV': JSON.stringify('production'),
-  __buildDate__: () => JSON.stringify(new Date()),
-  __buildVersion: 15
+  // 'process.env.NODE_ENV': JSON.stringify('production')
 }
 
 export default {

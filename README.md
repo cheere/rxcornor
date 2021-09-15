@@ -5,7 +5,7 @@
 # 一、 html Usage
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/rxcornor@0.0.7/dist/rxcornor.min.js"
+<script src="https://cdn.jsdelivr.net/npm/rxcornor@0.0.8/dist/rxcornor.min.js"
   id="rxcornor"
   link="https://github.com/cheere/rxcornor">
 </script>
@@ -14,7 +14,7 @@
 or (或者)
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/rxcornor@0.0.7/dist/rxcornor.min.js"
+<script src="https://cdn.jsdelivr.net/npm/rxcornor@0.0.8/dist/rxcornor.min.js"
   id="rxcornor"
   link="https://gitee.com/cheere/rxcornor"
   target="_blank"
