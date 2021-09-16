@@ -45,11 +45,14 @@ import 'rxcornor/dist/rxcornor.css'
   const c = new RxCornor()
   c.setConfig(rxcornorConfig)
 
-  // 1.1 single config
+  // single config
   c.title = 'again-srxboys' // not support
 
+  // RxCornor version
+  console.log(c.version) // '0.0.8'
 
-  // 2 get value = String
+
+  // get value = String
   const template = c.getTemplate()
   /*
     `<div>
@@ -60,27 +63,30 @@ import 'rxcornor/dist/rxcornor.css'
 
   // do animal - default - (classList add "play")
   c.addNomalAnimal()
+  c.addNomalAnimal('shank-play')
+  c.addNomalAnimal('run')
 ```
 
 <br>
 
-# API
-## 属性
-### id : 唯一标识
-`必须有 rxcornor` 且 只有一个
+# 三、API
+## id
+Unique identification(唯一标识) <br>
+Yes and only one (有且只有一个)。
 
-### link ：点击跳转的链接
+## link
+url/href (点击跳转的链接)
 
-### target : a 标签的 跳转方式
+## target : a 标签的 跳转方式
 _blank 、 _self 、 _parent 、 _top 、 `framename`
 
-### title : 角标上显示的文本
+## title : 角标上显示的文本
 
 
-### className ： 可以自定义添加 className
+## className ： 可以自定义添加 className
 自定义 样式的 class
 
-### style ：自定义样式
+## style ：自定义样式
 
 <br>
 

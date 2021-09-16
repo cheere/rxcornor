@@ -46,6 +46,7 @@ function _htmlLoad(cornorSc) {
   const title = getAttr('title') || 'GitHub'
   const className = getAttr('className') || ''
   const style = getAttr('style') || null
+  const animalClass = getAttr('animal') || 'play'
   const config = { link, target, title, className, style }
   setConfig(config)
   const src = getAttr('src') || ''
@@ -65,29 +66,22 @@ function _htmlLoad(cornorSc) {
 
   const div = document.createElement('div')
   div.innerHTML = getTemplate()
-  // div.innerHTML = `
-  //   <a href="${link}" target="${target}" rel="noopener noreferrer" title="Follow me on ${title}" aria-describedat="rxcornor">
-  //     <div class="rxcont ${className}">
-  //       <div class="text">${title}</div>
-  //     </div>
-  //   </a>
-  // `
   div.className = domString
 
   if (style) div.style = style
 
-
   const dateTime = parseInt(new Date().getTime() / 108000)
   headAppendLabel(origin + domString + '.css?' + dateTime)
   __appendChild(div)
+
+  // 进入
   div.onmouseover = function () {
-    // 进入
-    div.classList.add('play')
+    div.classList.add(animalClass)
   }
 
+  // 离开
   div.onmouseout = function () {
-    // 离开
-    div.classList.remove('play')
+    div.classList.remove(animalClass)
   }
 }
 
@@ -126,7 +120,7 @@ function __setObjDefine(key, value, options) {
 
 function getAllOwnProperty() {
   const config = {}
-  const safeKeys = ['link', 'target', 'title', 'className', 'style']
+  const safeKeys = ['link', 'target', 'title', 'className', 'style', 'animal']
   const keyValues = Object.entries(RxCornor.prototype)
   for (let i = 0; i < keyValues.length; i++) {
     const ownkv = keyValues[i]
@@ -184,13 +178,15 @@ function setConfig(options) {
   __setObjDefine('target', '_blank', options)
   __setObjDefine('className', '', options)
   __setObjDefine('style', null, options)
+  __setObjDefine('animal', null, options)
 }
 
-function addNomalAnimal() {
+function addNomalAnimal(newClassName) {
+  newClassName = newClassName || 'play'
   const d = document
   if (!d) {
     setTimeout(() => {
-      addNomalAnimal()
+      addNomalAnimal(newClassName)
     }, 10);
     return
   }
@@ -201,11 +197,11 @@ function addNomalAnimal() {
     if (div && div.nodeName && div.nodeName === 'DIV') {
       div.onmouseover = function () {
         // 进入
-        div.classList.add('play')
+        div.classList.add(newClassName)
       }
       div.onmouseout = function () {
         // 离开
-        div.classList.remove('play')
+        div.classList.remove(newClassName)
       }
     }
   }

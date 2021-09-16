@@ -36,6 +36,8 @@ if (template) {
     mounted() {
       this.$nextTick(() => {
         this.c.addNomalAnimal()
+
+        // this.c.addNomalAnimal('aaa')
       })
     }
   })
