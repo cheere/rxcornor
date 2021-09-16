@@ -71,7 +71,7 @@ import 'rxcornor/dist/rxcornor.css'
 
 # 三、API
 ## id
-Unique identification(唯一标识) <br>
+Unique identification(唯一标识) &nbsp;  `rxcornor`<br>
 Yes and only one (有且只有一个)。
 
 ## link
