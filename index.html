@@ -10,7 +10,7 @@
 
    <!-- 用于加载 README.md -->
    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
-   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/marked@4.0.0/marked.min.js"></script>
 </head>
 <body>
   <h1>看 源代码中  div-> class="rxcornor"</h1>
@@ -29,7 +29,7 @@
         url: 'README.md',
         dataType: 'text',
         success: function(data) {
-          document.getElementById('content').innerHTML = marked(data)
+          document.getElementById('content').innerHTML = marked.parse(data)
         }
     });
   });
