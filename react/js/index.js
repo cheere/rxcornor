@@ -24,29 +24,34 @@ const version = c.version
 console.log('version=', version)
 
 if (template) {
-  // 可以不用(在 html 中导入，或者在 vue-cli/vite 的 .js 模板中 导入)
+  // 可以不用(在 html 中导入，或者在 webpack/vite 的 .js 模板中 导入)
   c.headAppendLabel('../dist/rxcornor.css')
 
-  const componCornor = Vue.extend({ template,
-    data() {
-      return {
-        c
-      }
-    },
-    mounted() {
-      this.$nextTick(() => {
-        this.c.addNomalAnimal()
-
-        // c.addNomalAnimal('sound1')
-      })
+  const e = React.createElement
+  class MyCornorCode extends React.Component {
+    constructor(props) {
+      super(props)
     }
-  })
 
-  Vue.component('my-cornor', componCornor)
+    componentDidMount() {
+      setTimeout(() => {
+        c.addNomalAnimal()
+        // c.addNomalAnimal('sound2')
+      }, 1);
+    }
 
-  const app = new Vue({
-    el: '#app',
-  })
+    render() {
+      return e(
+        'div',
+        { dangerouslySetInnerHTML: { __html: template } }
+      )
+    }
+  }
+
+  const domContainer = document.createElement('div');
+  ReactDOM.render(e(MyCornorCode), domContainer);
+  document.body.appendChild(domContainer)
+
 } else {
   console.warn('template = null')
 }

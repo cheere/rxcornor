@@ -11,7 +11,7 @@ const fs = require('fs')
 const { resolve } = require('path')
 const { configBanner } = require('./util.config')
 
-const p = function(path) {
+const p = function (path) {
   return resolve(__dirname, '..', path)
 }
 
@@ -30,7 +30,7 @@ fs.readFile(cssPath, (err, css) => {
   // console.log('\ncss=', css , '\n\n')
   postcss([
     precss,
-    postcssPresetEnv({ stage: 0, browsers: ['> 1%','last 2 versions', 'not dead'] }),
+    postcssPresetEnv({ stage: 0, browsers: ['> 1%', 'last 2 versions', 'not dead'] }),
     autoprefixer
   ])
     .process(css, { from: cssPath, to: toPath })
@@ -42,13 +42,13 @@ fs.readFile(cssPath, (err, css) => {
       }
 
       if (typeof result === 'object') {
-        const str = result.css.replace(/[\r\n]/g,"");
+        const str = result.css.replace(/[\r\n]/g, "");
         const last = configBanner + str
         // console.log('1 - last str=', last)
         fs.writeFileSync(toPath, last)
-        if ( result.map ) fs.writeFileSync(toMapPath, result.map)
+        if (result.map) fs.writeFileSync(toMapPath, result.map)
       } else {
-        const str = result.replace(/[\r\n]/g,"");
+        const str = result.replace(/[\r\n]/g, "");
         const last = configBanner + str
         // console.log('2- last str=', last)
         fs.writeFileSync(toPath, last)
